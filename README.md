@@ -1,23 +1,33 @@
 # AI-workflow-assign
 
 ## PART ONE
-## AI Tutor for Special Needs Learners (Kenya)
-## Overview
+## Real Estate Price Trend Prediction
 
-AI-powered adaptive tutor to improve foundational literacy for Special Needs Learners (SNLs) in Kenyan primary schools. Supports personalized learning and aids educators.
-## Problem
+### Overview  
+This project predicts local property price trends using historical real estate data to help agents and investors make informed decisions.
 
-Addressing teacher shortages, limited materials, and need for individualized attention in Kenyan SNE.
-## Solution
+### Objectives  
+- Forecast future property prices  
+- Identify key price-influencing factors  
+- Provide pricing recommendations  
 
-AI tutor that personalizes content, identifies difficulties, assists lesson planning, and boosts engagement.
-## Tech
+### Data  
+- Sources: Zillow API, local government property records  
+- Preprocessing: Handle missing data, normalize features, encode categories  
+- Bias: Online listings may underrepresent off-market sales  
 
-    Model: RNNs with LSTMs for adaptive learning.
+### Model  
+- Random Forest Regressor for robustness and interpretability  
+- Data split: 70% train, 15% validation, 15% test  
+- Tune: number of trees and max tree depth  
 
-    Data: Anonymized learner performance and SNE curriculum.
+### Evaluation  
+- Metrics: Mean Absolute Error (MAE) and R-squared (R²)  
+- Monitor for concept drift by tracking prediction errors over time  
 
-    Deployment: Lightweight, offline-first for varied connectivity.
+### Deployment  
+- Challenge: Scalability for real-time data and fast predictions  
+- Retrain model as needed when concept drift is detected  
 
 ## AI System for Patient Readmission Risk Prediction
 
